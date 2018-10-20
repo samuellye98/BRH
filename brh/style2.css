@@ -40,6 +40,7 @@ header img {
   left: 0;
   float: left;
   max-width: 23%;
+  display: none
 }
 #search-input input {
   font-size: 28px;
@@ -60,9 +61,11 @@ header img {
 #search-input input::-webkit-input-placeholder, #search-input input:-moz-placeholder, #search-input input:-moz-placeholder, #search-input input:-ms-input-placeholder {
   font-weight: 100;
   color: #999;
+  display: none
 }
 #search-input-icon {
   position: relative;
+  display: none
 }
 #search-input-icon:before {
   position: absolute;
@@ -73,6 +76,7 @@ header img {
   content: '';
   cursor: default;
   background: url(img/search_icon.png) no-repeat;
+  display: none
 }
 #search-input-icon.empty:before {
   cursor: pointer;
