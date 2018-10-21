@@ -94,11 +94,10 @@ app.get('/token', function(request, response) {
 
 app.use(express.static(__dirname))
 
-app.get("/" , function(req,res)
+app.get("/chat" , function(req,res)
  {
 
-    console.log(__dirname);
-    res.sendFile(__dirname +"/chat.html");
+    res.sendFile(__dirname +"/chat/chat.html");
 
  }
 );
@@ -110,18 +109,9 @@ app.get('/helloWorld', function (req, res) {
 })
 
 app.get('/frame', function (req, res) {
-  res.sendFile(__dirname +"/framechat.html");
+  res.sendFile(__dirname +"/chat/framechat.html");
 })
 
-
-
-// Create and start an HTTP server to run our application
-var server = http.createServer(app);
-server.listen(config.port, function() {
-    console.log('Express server running on port ' + config.port);
+app.listen(7000, () => {
+   console.log('Chat server running on port 7000!');
 });
-
-// export the HTTP server as the public module interface
-module.exports = server;
-
-app.listen(3000);
