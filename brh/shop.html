@@ -54,7 +54,7 @@
                                     </ul>
                                     <ul class="single-mega cn-col-4">
                                         <li class="title">Education</li>
-                                        <li><a href="shop.html">Textbooks</a></li>
+                                        <li><a href="shop.html?type=Textbook">Textbooks</a></li>
                                         <li><a href="shop.html">iClickers</a></li>
                                         <li><a href="shop.html">Stationery</a></li>
                                         <li><a href="shop.html">Electronics</a></li>
@@ -67,7 +67,7 @@
                                     <ul class="single-mega cn-col-4">
                                         <li class="title">Housing</li>
                                         <li><a href="shop.html">Subletting</a></li>
-                                        <li><a href="shop.html">Renting</a></li>
+                                        <li><a href="shop.html?type=Housing">Renting</a></li>
                                     </ul>
                                     <div class="single-mega cn-col-4">
                                         <img src="img/bg-img/bg-6.jpg" alt="">
@@ -85,7 +85,7 @@
             <!-- Header Meta Data -->
             <div class="header-meta d-flex clearfix justify-content-end">
                 <div class="search-area">
-                    <form action="#" method="post">
+                    <form onsubmit="return false;">
                         <input type="search" name="search" id="search-input" placeholder="Type for search">
                         <script language="javascript" type="text/javascript">
                             let urlParams = new URLSearchParams(window.location.search),
@@ -197,7 +197,22 @@
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="page-title text-center">
-                        <h2>TEXTBOOKS</h2>
+                        <h2 id="title"></h2>
+                        <script>
+                          let type = urlParams.get('type')
+                          let title;
+                          switch (type){
+                            case "Textbook":
+                              title = "textbooks"
+                              break;
+                            case "Housing":
+                              title = "houses for rent"
+                              break;
+                            default:
+                              title = "search results"
+                          }
+                          document.getElementById("title").innerHTML = title
+                        </script>
                     </div>
                 </div>
             </div>
@@ -207,23 +222,26 @@
 
     <!-- start search -->
     <main>
-        <div id="refinement-list">
-        </div>
+      <div class="left-column">
+        <div id="price-refinement"></div>
+      </div>
+      <div class="right-column">
         <div id="hits"></div>
         <div id="pagination"></div>
-        <script type="text/html" id="hit-template">
-          <div class="hit">
-            <div class="hit-image">
-              <img src="{{image}}" alt="{{name}}">
-            </div>
-            <div class="hit-content">
-              <h3 class="hit-price">${{price}}</h3>
-              <h2 class="hit-name">{{{_highlightResult.name.value}}}</h2>
-              <p class="hit-description">{{{_highlightResult.description.value}}}</p>
-            </div>
-          </div>
-        </script>
+      </div>
     </main>
+    <script type="text/html" id="hit-template">
+      <div class="hit">
+        <div class="hit-image">
+          <img src="{{image}}" alt="{{name}}">
+        </div>
+        <div class="hit-content">
+          <h3 class="hit-price">${{price}}</h3>
+          <h2 class="hit-name">{{{_highlightResult.name.value}}}</h2>
+          <p class="hit-description">{{{_highlightResult.description.value}}}</p>
+        </div>
+      </div>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js"></script>
     <script src="js/app.js"></script>
     <!-- end search -->

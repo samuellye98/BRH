@@ -1,3 +1,5 @@
+let searchType = urlParams.get('type')
+
 const search = instantsearch({
   // Replace with your own values
   appId: 'S9M6RYTUAZ',
@@ -5,7 +7,13 @@ const search = instantsearch({
   indexName: 'Combined',
   urlSync: true,
   searchParameters: {
-    hitsPerPage: 10
+    hitsPerPage: 10,
+    facetsRefinements: {
+      type:[searchType || '']
+    },
+    // Add to "facets" all attributes for which you
+    // do NOT have a widget defined
+    facets: ['type']
   }
 });
 
@@ -52,5 +60,15 @@ search.addWidget(
     scrollTo: false
   })
 );
+
+search.addWidget(
+    instantsearch.widgets.refinementList({
+      container: '#price-refinement',
+      attributeName: 'price',
+      templates: {
+        header: 'Price'
+      }
+    })
+  );
 
 search.start()
