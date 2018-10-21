@@ -16,11 +16,10 @@
 
     <!-- Core Style CSS -->
     <link rel="stylesheet" href="css/core-style.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css">
     <!-- Always use `2.x` versions in production rather than `2` to mitigate any side effects on your website,
     Find the latest version on InstantSearch.js website: https://community.algolia.com/instantsearch.js/v2/guides/usage.html -->
-    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="stylesheet" type="text/css" href="css/search.css">
 </head>
 
 <body>
@@ -89,8 +88,9 @@
                     <form action="#" method="post">
                         <input type="search" name="search" id="search-input" placeholder="Type for search">
                         <script language="javascript" type="text/javascript">
-                             let inputSearch = window.location.search.replace("?search=", "")
-                             document.getElementById("search-input").value = inputSearch;
+                            let urlParams = new URLSearchParams(window.location.search),
+                                query = urlParams.get('search')
+                            document.getElementById("search-input").value = query;
                          </script>
 
                     </form>
@@ -225,7 +225,7 @@
         </script>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js"></script>
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
     <!-- end search -->
 
 
