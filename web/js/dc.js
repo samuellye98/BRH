@@ -59,6 +59,8 @@ var defaultLayers = platform.createDefaultLayers({
   ppi: pixelRatio === 1 ? undefined : 320
 });
 
+
+
 //Step 2: initialize a map - this map is centered over Ithaca/College
 var map = new H.Map(document.getElementById('map'),
   defaultLayers.normal.map,{
@@ -66,6 +68,7 @@ var map = new H.Map(document.getElementById('map'),
   zoom: 15,
   pixelRatio: pixelRatio
 });
+
 
 var locationsContainer = document.getElementById('panel');
 
@@ -76,6 +79,15 @@ var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
 
 // Create the default UI components
 var ui = H.ui.UI.createDefault(map, defaultLayers);
+
+
+// Create the StreetLevel UI element:
+var ui = new H.ui.UI(map, {
+  panorama: {
+    // Provide panorama coverage layer:
+    mapTypes: defaultLayers
+  }
+});
 
 // Hold a reference to any infobubble opened
 var bubble;
