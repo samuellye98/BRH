@@ -2,7 +2,18 @@ const search = instantsearch({
   // Replace with your own values
   appId: 'S9M6RYTUAZ',
   apiKey: 'f44d6a371b87978f46eba81e3d2797cc', // search only API key, no ADMIN key
-  indexName: 'demo',
+  indexName: 'Combined',
+  urlSync: true,
+  searchParameters: {
+    hitsPerPage: 10
+  }
+});
+
+const search2 = instantsearch({
+  // Replace with your own values
+  appId: 'S9M6RYTUAZ',
+  apiKey: 'f44d6a371b87978f46eba81e3d2797cc', // search only API key, no ADMIN key
+  indexName: 'Housingdata',
   urlSync: true,
   searchParameters: {
     hitsPerPage: 10
@@ -52,6 +63,5 @@ search.addWidget(
     scrollTo: false
   })
 );
-
 
 search.start()
