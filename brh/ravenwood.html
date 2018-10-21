@@ -7,9 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
+    <meta name="viewport" content="initial-scale=1.0,
+      width=device-width" />
+      <script src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
+      <script src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
+      <script src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+      <script src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+      <script src="http://js.api.here.com/v3/3.0/mapsjs-pano.js"
+   type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css"
+      href="http://js.api.here.com/v3/3.0/mapsjs-ui.css"/>
     <!-- Title  -->
-    <title>Essence - Fashion Ecommerce Template</title>
+    <title>Ravenwood Apartments</title>
 
     <!-- Favicon  -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -17,6 +26,17 @@
     <!-- Core Style CSS -->
     <link rel="stylesheet" href="css/core-style.css">
     <link rel="stylesheet" href="style.css">
+
+    <!--For Plugins external css-->
+    <link rel="stylesheet" href="css/plugins.css" />
+
+    <!--Theme custom css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <script src="js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
 </head>
 
@@ -105,120 +125,6 @@
     </header>
     <!-- ##### Header Area End ##### -->
 
-    <!-- ##### Right Side Cart Area ##### -->
-    <div class="cart-bg-overlay"></div>
-
-    <div class="right-side-cart-area">
-
-        <!-- Cart Button -->
-        <div class="cart-button">
-            <a href="#" id="rightSideCart"><img src="img/core-img/bag.svg" alt=""> <span>3</span></a>
-        </div>
-
-        <div class="cart-content d-flex">
-
-            <!-- Cart List Area -->
-            <div class="cart-list">
-                <!-- Single Cart Item -->
-                <div class="single-cart-item">
-                    <a href="#" class="product-image">
-                        <img src="img/product-img/h1.jpg" class="cart-thumb" alt="">
-                        <!-- Cart Item Desc -->
-                        <div class="cart-item-desc">
-                          <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
-                            <span class="badge">Travis Hyde Properties</span>
-                            <h6>Ravenwood Apartments</h6>
-                            <p class="size">Size: S</p>
-                            <p class="color">Color: Red</p>
-                            <p class="price">$45.00</p>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Single Cart Item -->
-                <div class="single-cart-item">
-                    <a href="#" class="product-image">
-                        <img src="img/product-img/h2.jpg" class="cart-thumb" alt="">
-                        <!-- Cart Item Desc -->
-                        <div class="cart-item-desc">
-                          <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
-                            <span class="badge">Travis Hyde Properties</span>
-                            <h6>Ravenwood Apartments</h6>
-                            <p class="size">Size: S</p>
-                            <p class="color">Color: Red</p>
-                            <p class="price">$45.00</p>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Single Cart Item -->
-                <div class="single-cart-item">
-                    <a href="#" class="product-image">
-                        <img src="img/product-img/h3.jpg" class="cart-thumb" alt="">
-                        <!-- Cart Item Desc -->
-                        <div class="cart-item-desc">
-                          <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
-                            <span class="badge">Travis Hyde Properties</span>
-                            <h6>Ravenwood Apartments</h6>
-                            <p class="size">Size: S</p>
-                            <p class="color">Color: Red</p>
-                            <p class="price">$45.00</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Single Cart Item -->
-            <div class="single-cart-item">
-                <a href="#" class="product-image">
-                    <img src="img/product-img/h4.jpg" class="cart-thumb" alt="">
-                    <!-- Cart Item Desc -->
-                    <div class="cart-item-desc">
-                      <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
-                        <span class="badge">Travis Hyde Properties</span>
-                        <h6>Ravenwood Apartments</h6>
-                        <p class="size">Size: S</p>
-                        <p class="color">Color: Red</p>
-                        <p class="price">$45.00</p>
-                    </div>
-                </a>
-            </div>
-
-
-            <!-- Single Cart Item -->
-            <div class="single-cart-item">
-                <a href="#" class="product-image">
-                    <img src="img/product-img/h5.jpg" class="cart-thumb" alt="">
-                    <!-- Cart Item Desc -->
-                    <div class="cart-item-desc">
-                      <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
-                        <span class="badge">Travis Hyde Properties</span>
-                        <h6>Ravenwood Apartments</h6>
-                        <p class="size">Size: S</p>
-                        <p class="color">Color: Red</p>
-                        <p class="price">$45.00</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Cart Summary -->
-            <div class="cart-amount-summary">
-
-                <h2>Summary</h2>
-                <ul class="summary-table">
-                    <li><span>subtotal:</span> <span>$274.00</span></li>
-                    <li><span>delivery:</span> <span>Free</span></li>
-                    <li><span>discount:</span> <span>-15%</span></li>
-                    <li><span>total:</span> <span>$232.00</span></li>
-                </ul>
-                <div class="checkout-btn mt-100">
-                    <a href="checkout.html" class="btn essence-btn">check out</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ##### Right Side Cart End ##### -->
-
     <!-- ##### Single Product Details Area Start ##### -->
     <section class="single_product_details_area d-flex align-items-center">
 
@@ -240,11 +146,22 @@
             <p class="product-price"><h4><font size="4">$648/Month</h4>
             <p class="product-desc">Looking for subletters for Summer 2019.</p>
             <p>The Ravenwood Apartments are located just 1 block from the edge of Cornell's West Campus. These modern, spacious apartments are fully furnished from the couches, easy chairs and coffee tables in the living rooms to the desks, dressers and single or double beds (your choice) in your bedrooms. The apartments all have private entrances and are equipped with large kitchens. There are 2 well-lit parking lots to fulfill most parking needs. A conveniently located bus stop is right out front on the corner of University Ave. and Lake St.</p>
-
-
         </div>
+
     </section>
     <!-- ##### Single Product Details Area End ##### -->
+    <section id="teams" class="teams roomy-80">
+        <div class="container">
+            <div class="row">
+              <div class="main_teams_content fix">
+                <div id="map" style="width: 640px; height: 480px"/>
+                <div id="panel" style="position:absolute; width:49%; left:51%; height:100%; background:inherit" ></div>
+                <script type="text/javascript" charset="utf-8"></script>
+                <script src="ravenwood.js"></script>
+              </div>
+            </div>
+        </div>
+    </section>
 
     <!-- ##### Footer Area Start ##### -->
     <footer class="footer_area clearfix">
