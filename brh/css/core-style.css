@@ -1060,6 +1060,7 @@ img {
 /* :: 11.0 Footer Area CSS */
 .footer_area {
   position: relative;
+  bottom: 0;
   z-index: 1;
   background-color: #252525;
   padding: 70px 0 60px; }
