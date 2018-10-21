@@ -99,16 +99,6 @@ app.get('/', function (req, res) {
     res.sendFile(path.resolve(__dirname + '/web', 'index.html'));
 });
 
-app.get("/chat" , function(req,res)
- {
-    res.sendFile(__dirname + "/web/chat/chat.html");
- }
-);
-
-app.get('/frame', function (req, res) {
-  res.sendFile(__dirname +"/chat/framechat.html");
-})
-
 app.listen(8000, () => {
    console.log('Server running on port 8000!');
 });
