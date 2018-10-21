@@ -60,15 +60,18 @@ search.addWidget(
     scrollTo: false
   })
 );
-
 search.addWidget(
-    instantsearch.widgets.refinementList({
-      container: '#price-refinement',
-      attributeName: 'price',
-      templates: {
-        header: 'Price'
+  instantsearch.widgets.rangeSlider({
+    container: '#price-slider',
+    attributeName: 'price',
+    templates: {
+      header: 'Price'
+    },
+    tooltips: {
+      format: function(rawValue) {
+        return '$' + Math.round(rawValue).toLocaleString();
       }
-    })
-  );
-
+    }
+  })
+);
 search.start()
