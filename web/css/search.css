@@ -6,7 +6,7 @@ html {
   overflow-y: scroll;
   background: #FFF;
 }
-header, main, #no-results, footer {
+headers, main, #no-results, footer {
   width: 1000px;
   margin: 0 auto;
 }
@@ -29,12 +29,12 @@ main {
 }
 
 /* INPUT */
-header {
+headers {
   position: relative;
   height: 80px;
   margin-top: 40px;
 }
-header img {
+headers img {
   position: absolute;
   top: 9px;
   left: 0;
@@ -287,23 +287,23 @@ header img {
 }
 
 /* Collapsable FACETS */
-.ais-root__collapsible .ais-header h5:hover {
+.ais-root__collapsible .ais-headers h5:hover {
   border-color: #c5c5c5;
   transition : border 500ms ease-out;
 }
 
-.ais-root__collapsible.ais-root__collapsed .ais-header h5:hover {
+.ais-root__collapsible.ais-root__collapsed .ais-headers h5:hover {
   border-color: #333;
 }
 
-.ais-root__collapsible .ais-header h5:before {
+.ais-root__collapsible .ais-headers h5:before {
   display: inline-block;
   font: normal normal normal 16px/1 FontAwesome;
   content: "\f106";
   float: right;
 }
 
-.ais-root__collapsible.ais-root__collapsed .ais-header h5:before {
+.ais-root__collapsible.ais-root__collapsed .ais-headers h5:before {
   content: "\f107";
 }
 

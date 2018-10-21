@@ -23,9 +23,10 @@
 	},
 	"homepage": "https://github.com/abhijitmehta/template-node",
 	"dependencies": {
-		"twilio": "^2.11.1",
 		"express": "^4.15.2",
-		"facebook-login-vuejs": "*"
+		"facebook-login-vuejs": "*",
+		"twilio": "^2.11.1",
+		"uniqid": "^5.0.3"
 	},
 	"devDependencies": {
 		"mocha": "^1.20.1",

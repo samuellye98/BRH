@@ -1,3 +1,9 @@
+var ID = function () {
+  // Math.random should be unique because of its seeding algorithm.
+  // Convert it to base 36 (numbers + letters), and grab the first 9 characters
+  // after the decimal.
+  return '_' + Math.random().toString(36).substr(2, 9);
+};
 var timeStamp = (new  Date()).getTime();
 var chatClient ;
 var channelType ;
@@ -9,12 +15,10 @@ var endpointId ;
 var flagIsPrivate ;
 
 
+
 // Shorthand for $( document ).ready()
 $(function() {
     console.log( "ready!" );
-    $('#memberName').val(getUrlParameter("memberName"));
-    $('#channelName').val(getUrlParameter("channel"));
-
 });
 
 
@@ -39,9 +43,9 @@ function getTokenAndSetupChat(memberName,endpointId)
 function startChat(cobrowserId,sessionKey)
   {
        $('#chatHistory').empty();
-      channelType=$('#channelType').val();
-      channelName=$('#channelName').val();
-      memberName=$('#memberName').val();
+      channelType=2;
+      channelName=ID();
+      memberName="";
 
       if (channelName === "")
          {
