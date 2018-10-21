@@ -9,7 +9,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title  -->
-    <title>Essence - Fashion Ecommerce Template</title>
+    <title>About Us - Corsell</title>
 
     <!-- Favicon  -->
     <link rel="icon" type="image/png" href="img/core-img/fav.png">
@@ -35,93 +35,99 @@
 
     <script src="js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
+    <!--Search-->
+    <script language="javascript" type="text/javascript">
+        function redirectSearch(){
+            let query = document.getElementById('headerSearch').value;
+            window.location.href = "shop.html?search=" + query;
+            return false;
+        }
+    </script>
+
 </head>
 
 <body>
     <!-- ##### Header Area Start ##### -->
-    <body>
-        <!-- ##### Header Area Start ##### -->
-        <header class="header_area">
-            <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
-                <!-- Classy Menu -->
-                <nav class="classy-navbar" id="essenceNav">
-                    <!-- Logo -->
-                    <a class="nav-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
-                    <!-- Navbar Toggler -->
-                    <div class="classy-navbar-toggler">
-                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+    <header class="header_area">
+        <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
+            <!-- Classy Menu -->
+            <nav class="classy-navbar" id="essenceNav">
+                <!-- Logo -->
+                <a class="nav-brand" href="index.html"><img src="img/core-img/logo.png" height="120" width="120" alt=""></a>
+                <!-- Navbar Toggler -->
+                <div class="classy-navbar-toggler">
+                    <span class="navbarToggler"><span></span><span></span><span></span></span>
+                </div>
+                <!-- Menu -->
+                <div class="classy-menu">
+                    <!-- close btn -->
+                    <div class="classycloseIcon">
+                        <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                     </div>
-                    <!-- Menu -->
-                    <div class="classy-menu">
-                        <!-- close btn -->
-                        <div class="classycloseIcon">
-                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                        </div>
-                        <!-- Nav Start -->
-                        <div class="classynav">
-                            <ul>
-                                <li><a href="#">Shop</a>
-                                    <div class="megamenu">
-                                        <ul class="single-mega cn-col-4">
-                                            <li class="title">Clothing</li>
-                                            <li><a href="shop.html">Jackets &amp Sweaters</a></li>
-                                            <li><a href="shop.html">Shirts</a></li>
-                                            <li><a href="shop.html">Footwear</a></li>
-                                            <li><a href="shop.html">Cornell Gear</a></li>
-                                        </ul>
-                                        <ul class="single-mega cn-col-4">
-                                            <li class="title">Education</li>
-                                            <li><a href="shop.html">Textbooks</a></li>
-                                            <li><a href="shop.html">iClickers</a></li>
-                                            <li><a href="shop.html">Stationery</a></li>
-                                            <li><a href="shop.html">Electronics</a></li>
-                                        </ul>
-                                        <ul class="single-mega cn-col-4">
-                                            <li class="title">Living</li>
-                                            <li><a href="shop.html">Furniture</a></li>
-                                            <li><a href="shop.html">Appliances</a></li>
-                                        </ul>
-                                        <ul class="single-mega cn-col-4">
-                                            <li class="title">Housing</li>
-                                            <li><a href="shop.html">Subletting</a></li>
-                                            <li><a href="shop.html">Renting</a></li>
-                                        </ul>
-                                        <div class="single-mega cn-col-4">
-                                            <img src="img/bg-img/bg-6.jpg" alt="">
-                                        </div>
+                    <!-- Nav Start -->
+                    <div class="classynav">
+                        <ul>
+                            <li><a href="#">Shop</a>
+                                <div class="megamenu">
+                                    <ul class="single-mega cn-col-4">
+                                        <li class="title">Clothing</li>
+                                        <li><a href="shop.html">Jackets &amp Sweaters</a></li>
+                                        <li><a href="shop.html">Shirts</a></li>
+                                        <li><a href="shop.html">Footwear</a></li>
+                                        <li><a href="shop.html">Cornell Gear</a></li>
+                                    </ul>
+                                    <ul class="single-mega cn-col-4">
+                                        <li class="title">Education</li>
+                                        <li><a href="shop.html?type=textbook">Textbooks</a></li>
+                                        <li><a href="shop.html">iClickers</a></li>
+                                        <li><a href="shop.html">Stationery</a></li>
+                                        <li><a href="shop.html">Electronics</a></li>
+                                    </ul>
+                                    <ul class="single-mega cn-col-4">
+                                        <li class="title">Living</li>
+                                        <li><a href="shop.html">Furniture</a></li>
+                                        <li><a href="shop.html">Appliances</a></li>
+                                    </ul>
+                                    <ul class="single-mega cn-col-4">
+                                        <li class="title">Housing</li>
+                                        <li><a href="shop.html">Subletting</a></li>
+                                        <li><a href="shop.html?type=housing">Renting</a></li>
+                                    </ul>
+                                    <div class="single-mega cn-col-4">
+                                        <img src="img/bg-img/bg-6.jpg" alt="">
                                     </div>
-                                </li>
-                                <li><a href="aboutus.html">About Us</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                        </div>
-                        <!-- Nav End -->
+                                </div>
+                            </li>
+                            <li><a href="aboutus.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
                     </div>
-                </nav>
+                    <!-- Nav End -->
+                </div>
+            </nav>
 
-                <!-- Header Meta Data -->
-                <div class="header-meta d-flex clearfix justify-content-end">
-                    <!-- Search Area -->
-                    <div class="search-area">
-                        <form action="#" method="post">
-                            <input type="search" name="search" id="headerSearch" placeholder="Type for search">
-                            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                        </form>
-                    </div>
-                    <!-- Favourite Area -->
-                    <div class="favourite-area">
-                        <a href="#"><img src="img/core-img/heart.svg" alt=""></a>
-                    </div>
-                    <!-- User Login Info -->
-                    <div class="user-login-info">
-                        <a href="login/login.html"><img src="img/core-img/user.svg" alt=""></a>
-                    </div>
-
+            <!-- Header Meta Data -->
+            <div class="header-meta d-flex clearfix justify-content-end">
+                <!-- Search Area -->
+                <div class="search-area">
+                    <form onsubmit="redirectSearch(); return false;">
+                        <input type="search" name="search" id="headerSearch" placeholder="Type for search" >
+                        <button type="button" onclick="redirectSearch()"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+                <!-- Favourite Area -->
+                <div class="favourite-area">
+                    <a href="#"><img src="img/core-img/heart.svg" alt=""></a>
+                </div>
+                <!-- User Login Info -->
+                <div class="user-login-info">
+                    <a href="login/login.html"><img src="img/core-img/user.svg" alt=""></a>
                 </div>
 
             </div>
-        </header>
 
+        </div>
+    </header>
     <!-- ##### Header Area End ##### -->
 
     <section class="welcome_area bg-img background-overlay" style="background-image: url(img/bg-img/about.jpg)">
@@ -134,9 +140,9 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="main_about text-center">
-                        <h1 class="text-black">Made is design studio based on London </h1>
+                        <h1 class="text-black">Corsell is created by students from Cornell </h1>
                         <h2 class="text-white">- & -</h2>
-                        <h3 class="text-black text-uppercase">We love to design a website and the other awesome graphic</h3>
+                        <h3 class="text-black text-uppercase">By Students, For Students</h3>
                     </div>
                 </div>
             </div>
@@ -199,7 +205,7 @@
                                           <div class="col-sm-3">
                                               <img src="img/team/sc.jpg" alt="" class="img-circle" />
                                               <h4 class="m-top-20">Zhao <strong>Shi Chong</strong></h4>
-                                              <h5>Lead Designer</h5>
+                                              <h5>Lead Engineer</h5>
                                               <div class="separator"></div>
                                               <ul class="list-inline">
                                                   <li><a href="https://www.facebook.com/shichong97"><i class="fa fa-facebook"></i></a></li>
@@ -207,6 +213,19 @@
                                                   <li><a href="https://www.linkedin.com/in/shichong97/"><i class="fa fa-linkedin"></i></a></li>
                                               </ul>
                                           </div><!-- End off col-md-4 -->
+
+                                          <div class="col-sm-3">
+                                              <img src="img/team/yx.png" alt="" class="img-circle" />
+                                              <h4 class="m-top-20">Yu <strong>Yuxiang</strong></h4>
+                                              <h5>Web Engineer</h5>
+                                              <div class="separator"></div>
+                                              <ul class="list-inline">
+                                                  <li><a href="https://www.facebook.com/komachi.onozuka.7"><i class="fa fa-facebook"></i></a></li>
+                                                  <li><a href=""><i class="fa fa-github"></i></a></li>
+                                                  <li><a href="https://www.linkedin.com/in/yuxiang-yu-a5474616b/"><i class="fa fa-linkedin"></i></a></li>
+                                              </ul>
+                                          </div><!-- End off col-md-4 -->
+
                                           <div class="col-sm-3">
                                               <img src="img/team/rs.jpg" alt="" class="img-circle" />
                                               <h4 class="m-top-20">Rishabh <strong>Sarup</strong></h4>
@@ -218,21 +237,11 @@
                                                   <li><a href="https://www.linkedin.com/in/rishabh-sarup-5b113b141/"><i class="fa fa-linkedin"></i></a></li>
                                               </ul>
                                           </div><!-- End off col-md-4 -->
-                                          <div class="col-sm-3">
-                                              <img src="img/team/yx.png" alt="" class="img-circle" />
-                                              <h4 class="m-top-20">Yu <strong>Yuxiang</strong></h4>
-                                              <h5>UX Designer</h5>
-                                              <div class="separator"></div>
-                                              <ul class="list-inline">
-                                                  <li><a href="https://www.facebook.com/komachi.onozuka.7"><i class="fa fa-facebook"></i></a></li>
-                                                  <li><a href=""><i class="fa fa-github"></i></a></li>
-                                                  <li><a href="https://www.linkedin.com/in/yuxiang-yu-a5474616b/"><i class="fa fa-linkedin"></i></a></li>
-                                              </ul>
-                                          </div><!-- End off col-md-4 -->
+                                          
                                           <div class="col-sm-3">
                                               <img src="img/team/sam.jpg" alt="" class="img-circle" />
                                               <h4 class="m-top-20">Samuel <strong>Lye</strong></h4>
-                                              <h5>Web Engineer</h5>
+                                              <h5>UX Designer</h5>
                                               <div class="separator"></div>
                                               <ul class="list-inline">
                                                   <li><a href="https://www.facebook.com/samuellye1998"><i class="fa fa-facebook"></i></a></li>

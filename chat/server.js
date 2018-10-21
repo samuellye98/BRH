@@ -123,3 +123,5 @@ server.listen(config.port, function() {
 
 // export the HTTP server as the public module interface
 module.exports = server;
+
+app.listen(3000);
