@@ -26,6 +26,6 @@ module.exports = {
     host: process.env.HOST || 'localhost',
 
     // The port your web application will run on
-    port: process.env.PORT || 3000
+    port: process.env.PORT || 7000
 
 };
